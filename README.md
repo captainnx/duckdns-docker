@@ -5,8 +5,8 @@ Update IP on DuckDNS periodically. Works with docker secrets. Tested on `amd64`,
 Uses Alpine Linux for a minimal footprint. Uses a cronjob to run the standard DuckDNS curl script using no external dependencies.
 
 Container packages available from Docker Hub and Github Container Registry (ghcr.io)
-  - Docker Hub Image: `anujdatar/duckdns`
-  - GHCR Image: `ghcr.io/anujdatar/duckdns`
+  - Docker Hub Image: `captainnx/duckdns`
+  - GHCR Image: `ghcr.io/captainnx/duckdns`
 
 ---
 
@@ -30,7 +30,7 @@ docker run -d \
   -e TZ=America/New_York \
   --restart unless-stopped \
   --name duckdns \
-  ghcr.io/anujdatar/duckdns
+  ghcr.io/captainnx/duckdns
 ```
 
 ### docker-compose
@@ -38,7 +38,7 @@ docker run -d \
 version: "3"
 services:
   duckdns:
-    image: ghcr.io/anujdatar/duckdns
+    image: ghcr.io/captainnx/duckdns
     container_name: duckdns
     restart: unless-stopped
     environment:
@@ -54,7 +54,7 @@ In case you plan to commit your docker-compose files to repos and wish to keep t
 version: "3"
 services:
   testduckdns:
-    image: ghcr.io/anujdatar/duckdns
+    image: ghcr.io/captainnx/duckdns
     container_name: duckdns
     restart: unless-stopped
     environment:
