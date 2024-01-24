@@ -5,7 +5,7 @@
 # #####################################################################
 # functions to get public ip
 get_ip4() {
-  CURRENT_IP=$(curl -s https://ipv4.icanhazip.com/ || curl -s https://api.ipify.org)
+  CURRENT_IP=$(curl -s http://4.ipw.cn/ || curl -s http://myip.ipip.net/s)
   if [ -z $CURRENT_IP ]; then
     dig_ip=$(dig txt ch +short whoami.cloudflare @1.1.1.1)
     if [ "$?" = 0 ]; then
